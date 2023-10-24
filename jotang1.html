@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客</title>
+
+    <link rel="stylesheet" href="styles/jotang1.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- 个人简介 -->
+        <section id="profile">
+            <h1>个人简介</h1>
+            <p>网名：sinaxgel</p>
+            <p>性别: 男</p>
+            <p>兴趣爱好: 足球，动漫，游戏</p>
+            <a>个人名片</a>
+            <div class="card">
+                <div class="profile-pic"></div>
+                <div class="info">
+                    <div class="name">姓名：张鹏程</div>
+                    <div class="student-id">学号：2022090909018</div>
+                    <div class="phone">电话：138-3314-1821</div>
+                    <div class="email">邮箱：32322298486@qq.com</div>
+                    <div class="encour">为了焦糖工作室努力奋斗</div>
+                </div>
+                <div class="QRcode"></div>
+                <div class="school">电子科技大学</div>
+            </div>
+        </section>
+
+        <!-- 做题记录 -->
+        <section id="records">
+            <h1>招新马拉松做题记录</h1>
+            <div class="record">
+                <p>学习记录: Git</p>
+                <p>遇到的困难: 对git的操作不够熟练，底层逻辑不够清晰</p>
+                <p>心得体会: git是一个非常便利的工具，后续一定要完善个人博客</p>
+                <p>上传时间: 2023-09-15</p>
+            </div>
+            <div class="record">
+                <p>学习记录: Markdonw</p>
+                <p>遇到的困难: 对Markdonw的排版不够美观</p>
+                <p>心得体会: 多写多试，markdown确实很轻质化，简洁美观</p>
+                <p>上传时间: 2023-09-17</p>
+            </div>
+            <div class="record">
+                <p>学习记录: Linux&WSL</p>
+                <p>遇到的困难: 不熟悉Linux的操作系统</p>
+                <p>心得体会: 多尝试，熟能生巧</p>
+                <p>上传时间: 2023-09-19</p>
+            </div>
+            <div class="record">
+                <p>学习记录: Docker</p>
+                <p>遇到的困难: 对docker运作的底层逻辑不确定</p>
+                <p>心得体会: 多试错，边尝试边分析</p>
+                <p>上传时间: 2023-09-21</p>
+            </div>
+            <div class="record">
+                <p>学习记录: 网站首页</p>
+                <p>遇到的困难: 布局很花时间，悬停自动播放</p>
+                <p>心得体会: vscode的live-server很好用</p>
+                <p>上传时间: 2023-10-20</p>
+            </div>
+            <div class="record">
+                <p>学习记录: 视频页</p>
+                <p>遇到的困难: 评论区的制作</p>
+                <p>心得体会: 被绕晕了</p>
+                <p>上传时间: 2023-10-22</p>
+            </div>
+        </section>
+
+        <!-- 照片墙 -->
+        <section id="photo-wall">
+            <h1>照片墙</h1>
+            <figure>
+                <img src="images/photo1.jpg" alt="">
+                <figcaption>足球</figcaption>
+            </figure>
+            <figure>
+                <img src="images/photo2.jpg" alt="">
+                <figcaption>聚会</figcaption>
+            </figure>
+            <figure>
+                <img src="images/photo3.jpg" alt="">
+                <figcaption>出街</figcaption>
+            </figure>
+        </section>
+
+        <!-- 文章分享 -->
+        <section id="article-share">
+            <h1>文章分享</h1>
+            <input type="text" id="article-search" placeholder="搜索文章...">
+            <button id="search-btn">搜索</button>
+            <button id="show-all-btn">显示全部</button>
+            <div id="articles">
+                <article>
+                    <h2>Git的优势</h2>
+                    <p>在我看来最突出的优势在于，回退。</p>
+                    <p>Git允许文件回退至之前的任何版本，这样可以极大地避免开发过程中的不可逆错误。
+                        在之后的学习中，也就是网页的制作中，尤其是通过JavaScript实现各种各样的功能时，我再次意识到了回退的便捷，
+                        例如当我正在着手实现视频的弹幕功能，我们很难做到一次就达到理想的状态，后续修改中又很容易出现一些错误的尝试，并且很可能会大量更改现有的代码，
+                        如果出现错误时无疑需要我们回退到一个正确的版本重新进行思考与开发，而开始阶段，我总是通过Ctrl+z或者另外准备一个insurance文件总是存放最近的正确的版本，
+                        例如我要修改了，先把现在的代码copy到insurance中，以确保当我出现错误时能够挽救，
+                        直到后面才开始用Git来进行管理我的项目，说来也是惭愧。
+                    </p>                    
+                    <p>当然此外还有其他的优势，像允许多线程作业，团队合作等等，由于目前还接触不到这里不多赘述。</p>
+                </article>
+                <article>
+                    <h2>Git工作流</h2>
+                    <p>这部分其实就是关于团队合作的问题，根据学长学姐提供的资料和自行查阅的资料，下面简单谈谈我个人的理解</p>
+                    <p>Git工作流是一个团队各个成员如何进行自己的工作又如何进行合作的方式，下面是常见的工作流</p>
+                    <li>特性分支（Feature Branching）</li>
+                    <p>成员在主分支上创建一个新的分支，在新分支上进行操作，这个分支不会影响到主分支，最终完成了相应任务后，将分支并入主分支。
+                        就比如说盖房子或者装修，我们会把较为独立的原件单独加工后运到指定地方完成任务，而非直接在指定地方进行原件的制作。
+                    </p>
+                    <li>集中式工作流（Centralized Workflow）</li>
+                    <p>成员每个在都在主分支上进行操作，这样很容易出现错误，成员间的操作出现冲突。
+                        还是上述的例子，那个制作某个原件的人就会很碍事，他会妨碍我们在他的地盘干活。
+                        因此这种方式并不太受欢迎，当然也有他的用武之地，比如我们两个人一起做个小项目，这种无疑是更加方便的。
+                    </p>
+                    <li>Gitflow Workflow</li>
+                    <p>这个比较像特性分支，但是会有特定的分支用于干特定的事，分支结构也是固定的，
+                        例如master用于生产环境，存储正式发布版；develop用于下一版的开发，后续会合并到master；release用于新版本发布时的修复与维护，等等，
+                        相比较普通的特性分支，Gitflow更加结构化，细致化，同时也更加固定化，因此不适合小团队，更加适合大团队。
+                    </p>
+                    <li>分支工作流（Forking Workflow）</li>
+                    <p>每个成员都在自己的仓库进行操作，然后将操作合并到主仓库，关于这个与前面的特性分支的不同点在于，主仓库的权限。
+                        特性分支是有权对主仓库进行操作，但是为了不影响团队因此另外开辟分支，而forking则是无主仓库的操作权限。
+                        简单来说，小项目适合特性分支，因为大伙互相信任，且有人能操作主仓库纠错，但大项目就适合forking，避免个别人对主仓库进行不可逆的修改。
+                    </p>
+                </article>
+                <article>
+                    <h2>Docker</h2>
+                    <li>基础认识</li>
+                    <p>Docker是一个用于开发，交付，和运行的平台，允许将程序及其环境等一切依赖项打包成为容器，而容器允许在任何主机，在任何地方运行，因为容器内已经包含了运行需要的环境等一切依赖项。</p>
+                    <p>Docker优势：主要就在于极强的可移植性，确保程序能够在任何环境下运行，因此同时具有很强的分享性，使得其他用户可以远程直接运行你的程序，此外还有很强的隔离性，容器与主机相互隔离，互不影响。</p>
+                    <li>重要的概念</li>
+                    <p>容器：运行实例，即程序和依赖项的集合</p>
+                    <p>映像：容器的模版，指导容器如何工作</p>
+                    <p>Dockerfile：描述如何构建映像</p>
+                    <p>即：Dockerfile ---> 映像 ---> 容器</p>
+                    <p>这里形象地解释一下，映像就像说明书，容器则是成品，映像会说明容器需要什么，同时映像允许存储，分享等，而容器是最终的效果，无论容器如何变化，不会影响到映像，
+                        因此一个映像允许多个容器产生，映像变化，容器随之变化，而Dockerfile则是编写说明书的过程，Dockerfile会明确说明书需要包含哪些内容
+                    </p>
+                </article>
+            </div>
+        </section>
+    </div>
+
+    <script src="scripts/jotang1.js"></script>
+
+</body>
+
+</html>

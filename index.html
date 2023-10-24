@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinaxgel's Navigation Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            overflow-y: hidden;
+        }
+
+        header {
+            background-image: url('images/background5.jpg');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            font-size: 36px;
+            height: 470px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+        }
+
+        .box {
+            flex: 1;
+            padding: 40px;
+        }
+
+        .box h2 {
+            border-bottom: 4px solid #ccc;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            font-size: 30px;
+        }
+
+        .box button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 20px 40px;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+        }
+
+        .box .btn-0010 {
+            background-color: #FF5733;
+        }
+
+        .box .btn-0011 {
+            background-color: #33FF57;
+        }
+
+        .box button:hover {
+            background-color: #555;
+        }
+        a {
+            text-decoration: none;
+            color: inherit; 
+        }
+        .encour{
+            font-size: 20px;
+            font-weight: bold;
+            position: absolute;
+            right: 20px;
+            bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        欢迎来到sinaxgel的网站
+    </header>
+    <div class="container">
+        <div class="box">
+            <h2>jotang工作室</h2>
+            <div class="button-container">
+                <a href="jotang1.html"><button class="btn-0010">个人博客</button></a>
+                <a href="jotang2.html"><button class="btn-0011">bilibili首页</button></a>
+                <a href="video.html"><button class="btn-0100">bilibili视频页</button></a>
+            </div>
+        </div>
+        <p class="encour">其他内容 敬请期待...</p>
+    </div>
+</body>
+
+</html>
