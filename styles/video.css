@@ -1,0 +1,1105 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* 一页盒子的尺寸 */
+html{
+    margin: 0 auto;
+    background-color: #ffffff;
+    width: 100%;
+    height: 3000px;
+    overflow-x: hidden;
+}
+
+.head {
+    width: 1700px;
+    margin-left: -1px;
+    height: 155px;
+}
+/* 头部导航栏的尺寸 */
+.daohanglan {
+    width: 1800px;
+    height: 100px;
+    position: fixed;
+    top: 0px;
+}
+/* 左侧导航栏位置 */
+.daohanglan-zuo {
+    display: inline-block;
+    position: relative;
+    left: 40px;
+    top: -12px;
+}
+/* 左侧导航栏标签特性 */
+.daohanglan-zuo li {
+    display: inline-block;
+    list-style: none;
+}
+/* 左侧导航栏标签位置 */
+.daohanglan-zuo li a {
+    /* 文本下划线种类 */
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    display: inline-block;
+    font-weight: 550;
+    letter-spacing: 1px;
+}
+
+/* 下载图标的大小 */
+.daohanglan ul li a img {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+}
+/* 搜索框 */
+.sousuokuang {
+    width: 500px;
+    height: 40px;
+    background-color: #dadadb;
+    /* 不透明度 */
+    opacity: 0.9;
+    /* 圆角边框 */
+    border-radius: 9px;
+    display: inline-block;
+    position: relative;
+    top: 15px;
+    left: 130px;
+}
+/* 搜索框鼠标悬停反馈 */
+.sousuokuang:hover {
+    background-color: #ffffff;
+
+}
+/* 搜索框中文字输入区 */
+.sousuokuang form {
+    width: 446px;
+    height: 38px;
+    padding-left: 4px;
+    padding-right: 48px;
+}
+/* 搜索框的位置 */
+.shurukuang {
+    width: 427px;
+    height: 28px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+/* 搜索框中输入框的特性 */
+.shurukuang input {
+    outline: none;
+    width: 400px;
+    height: 30px;
+    background-color: #dadadb;
+    opacity: 0.9; 
+    border:0;
+    padding-right: 8px;
+    padding-left: 9px;
+    margin-top: 3px;
+    margin-left: 1px;
+    border-radius: 5px;
+
+}
+
+/* 鼠标在搜索框悬停的反应 */
+.shurukuang input:hover {
+    background-color: #ffffff;
+    border: 0;
+}
+/* 搜索小图标盒子的属性 */
+.sousuo-tubiao {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+
+}
+/* 搜索小图标的位置 */
+.sousuo-tubiao img {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    left: 455px;
+    top: -21px;
+}
+/* 右侧用户区盒子位置 */
+.daohanglan-you {
+    width: 511px;
+    height: 50px;
+    display: inline-block;
+    position: relative;
+    left: 200px;
+}
+
+/* 右侧用户区盒子位置 */
+.daohanglan-you {
+    width: 511px;
+    height: 50px;
+    display: inline-block;
+    position: relative;
+    left: 200px;
+}
+/* 用户区行内盒子 */
+.daohanglan-you ul li {
+    display: inline-block;
+
+}
+/* 用户区各标签盒子的大小 */
+.daohanglan-you ul li a {
+    text-decoration: none;
+    display: inline-block;
+    width: 50px;
+    height: 39px;
+}
+/* 用户区图标 */
+.daohanglan-you ul li a img {
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin-left: 2px;
+}
+/* 右侧用户区文字 */
+.daohanglan-you ul li a span {
+    color: black;
+    font-weight: 550;
+    font-size: 10px;
+}
+.daohanglan-you ul li a .tougao{
+    color: white;
+}
+
+.denglukuang {
+    position: fixed;
+    top: 10%;       
+    left: 62%;       
+    width: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    display: none;  
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    z-index: 10;
+}
+
+.denglu-touxiang {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}
+
+.denglukuang-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.denglu-input {
+    width: 100%;
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#nownameInput {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.now-name {
+    position: absolute;
+    top: 35px;
+    left: 110px;
+    
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+#querenBtn{
+    margin-left: 95px;
+}
+
+
+/* 下面的播放页 */
+.quanbu {
+    width: 1215px;
+    margin: 0 auto;
+}
+ 
+.shipinqu {
+    margin-top: 20px;
+    overflow: hidden;
+}
+ 
+.shipin-zuo {
+    float: left;
+    width: 864px;
+}
+/* 大视频 */
+.shipin {
+    position: relative;
+    width: 864px;
+    box-shadow: 0 0 3px 3px #ccc;
+}
+ 
+.shipin video {
+    display: block;
+    width: 864px;
+}
+/* 弹幕 */
+.danmu-tools {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    width: 864px;
+    box-sizing: border-box;
+}
+
+.danmu-tools img{
+    width: 26px;
+}
+.danmu-tools img:hover{
+    transform: scale(1.1);
+}
+
+.danmu-tools #danmuInput {
+    flex-grow: 1;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.danmu-tools #sendDanmu {
+    margin-left: 10px;
+    padding: 5px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1px;
+}
+.danmu-tools #sendDanmu:hover{
+    background-color: #0056b3;
+}
+.danmu-yangshi-container {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 150px;
+    left: 200px;
+    top: 580px;
+}
+
+.color-option, .size-option {
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.color-option {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.size-option {
+    padding: 5px 10px;
+    border: none;
+    background-color: #f5f5f5;
+}
+
+
+.danmu {
+    position: absolute;
+    right: 0;
+    white-space: nowrap;
+    color: white;
+    font-size: 20px;  
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: transform 10s linear; 
+    text-shadow: 
+    -1px -1px 0 #000, 
+    1px -1px 0 #000, 
+    -1px 1px 0 #000, 
+    1px 1px 0 #000; 
+}
+/* 为选中的颜色选项添加粉色边框 */
+.color-option.selected {
+    border: 2px solid pink;
+}
+
+/* 为选中的大小选项深化背景颜色 */
+.size-option.selected {
+    background-color: #ccc;
+}
+
+/* 弹幕定格 */
+.danmu.paused {
+    animation-play-state: paused;
+}
+/* 倍速 */
+.speed-kaiguan {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1px;
+}
+.speed-kaiguan:hover {
+    background-color: #0056b3;
+}
+.speed-yangshi-container {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 50px;
+    height:140px;
+    right: 585px; 
+    top: 510px; 
+}
+.speed-option {
+    display: inline-block;
+    margin: 5px 0;
+    padding: 5px 10px;
+    border: none;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    width: 50px;
+}
+.speed-option.selected {
+    border: 1px solid black;
+}
+
+/* 为弹幕设置和倍速设置中的文本设置黑色字体 */
+.danmu-yangshi-container,
+.speed-yangshi-container,
+.size-option,
+.speed-option {
+    color: black;
+}
+
+
+/* 工具栏 */
+.shipin-zuo .ewai {
+    height: 55px;
+    line-height: 55px;
+}
+ 
+.shipin-zuo .ewai li {
+    float: left;
+    height: 55px;
+    margin-right: 35px;
+}
+ 
+.shipin-zuo .ewai li em {
+    float: left;
+    font-size: 28px !important;
+    margin-right: 10px;
+    color: #757575;
+}
+ 
+.shipin-zuo .ewai li span {
+    float: left;
+    font-size: 14px;
+    color: #505050;
+}
+ 
+.xiafang {
+    height: 212px;
+    padding: 16px 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+/* 左边的封面 */
+.xiafang-zuo {
+    float: left;
+    width: 134px;
+    height: 179px;
+}
+ 
+.xiafang-zuo img {
+    width: 100%;
+    height: 100%;
+}
+/* 右边的描述 */
+.xiafang-you {
+    float: right;
+    width: 715px;
+    height: 175px;
+}
+ 
+.xiafang-you .title {
+    width: 715px;
+    height: 32px;
+}
+ 
+.xiafang-you .title h3 {
+    display: inline-block;
+    color: #212121;
+    font-weight: 400;
+}
+ 
+.title-you {
+    float: right;
+}
+ 
+.title-you .dianping {
+    float: left;
+    height: 32px;
+    line-height: 32px;
+    color: #18191c;
+    padding: 0 12px;
+    border-radius: 2px;
+    border: 1px solid #c0c0c0;
+}
+ 
+.title-you .dianping span {
+    font-size: 14px;
+    color: #505050;
+}
+ 
+.title-you .zhuifan {
+    float: left;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 12px;
+    margin-left: 10px;
+    color: #fff;
+    border-radius: 2px;
+    background-color: #fb7299;
+}
+ 
+.xiafang-you .xiafang-count,
+.biaoqian,
+.jieshao {
+    font-size: 12px;
+}
+ 
+.xiafang-count {
+    color: #999;
+}
+ 
+.biaoqian,
+.jieshao {
+    margin-top: 10px;
+    color: #212121;
+}
+ 
+.biaoqian .jishu {
+    margin: 0 10px;
+}
+ 
+.jieshao {
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+ 
+.xiafang-you .pingfen {
+    margin-top: 15px;
+}
+ 
+.xiafang-you .pingfen p {
+    color: #ffa726;
+}
+ 
+.xiafang-you .pingfen p .shuzi {
+    font-size: 24px;
+    font-weight: 700;
+}
+ 
+.xiafang-you .pingfen p .fen {
+    font-size: 12px;
+}
+ 
+.xiafang-you .pingfen .ren {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #999;
+}
+ 
+ 
+.shuliang {
+    margin: 20px 0;
+    font-size: 18px;
+    color: #222;
+}
+/* 评论区输入 */
+.comment-container {
+    display: flex; 
+    align-items: center; 
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+}
+
+.comment-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 23px;
+    margin-right: 10px;
+}
+
+.comment-input {
+    flex-grow: 1; 
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: height 0.3s; 
+    height: 30px;
+    outline: none;
+}
+
+.comment-input:hover {
+    border-color: #888;
+}
+
+.comment-input:focus {
+    height: 60px; 
+    border-color: #007BFF;
+}
+
+.comment-send {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment-send:hover {
+    background-color: #0056b3;
+}
+.comment-send.login {
+    background-color: #fb7299;
+}
+.comment-send.login:hover {
+    background-color: #e50041;
+}
+/* 评论区主体 */
+.comments-display {
+    margin-top: 20px;
+}
+
+.comment-item {
+    display: flex;
+    flex-direction: column;  
+    align-items: stretch;    
+    margin-bottom: 20px;
+    padding: 10px;
+    border-top: 1px solid #d4d4d4;
+
+    
+    position: relative;  
+    
+    
+}
+
+.comment-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.comment-item > div {
+    display: flex;
+    align-items: center;
+}
+
+.comment-item > div > div {
+    margin-left: 10px;  
+}
+
+.comment-item div div {
+    color: grey; 
+    font-size: 14px; 
+}
+
+.comment-time-container {
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.comment-like-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    margin-left: 15px;
+}
+
+.comment-reply {
+    margin-left: 10px; 
+}
+
+.comment-item > div:nth-child(1) > div:nth-child(2) {
+    color: #505050;
+    font-weight: bold;
+}
+
+.delete-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 3px;
+    top: 85px;
+}
+
+/* 回复输入框的容器 */
+.reply-container {
+    display: flex; 
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.reply-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 23px;
+    margin-right: 10px;
+}
+
+.reply-input {
+    flex-grow: 1; 
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: height 0.3s;
+    height: 30px;
+    outline: none;
+}
+
+.reply-input:hover {
+    border-color: #888;
+}
+
+.reply-input:focus {
+    height: 60px;
+    border-color: #007BFF;
+}
+
+.reply-send {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reply-send:hover {
+    background-color: #0056b3;
+}
+
+.reply-send.login {
+    background-color: #fb7299;
+}
+.reply-send.login:hover {
+    background-color: #e50041;
+}
+
+
+.reply-item {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-left: 60px;
+    margin-bottom: 10px;
+}
+
+.reply-avatar {
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    margin-right: 5px;
+}
+
+.reply-item > div {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.reply-username, .reply-to-username {
+    font-weight: bold;
+    color: #505050;
+    font-size: 13px;
+}
+
+.reply-label {  
+    font-weight: normal;
+    color: grey;
+    margin: 7px 7px;
+    font-size: 13px;
+
+}
+
+.reply-content{
+margin-left: 20px;
+}
+
+
+.reply-time {
+    color: grey;
+    font-size: 14px;
+    margin-left: 2px;
+    margin-top: 10px;
+}
+
+.reply-like-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.reply-delete-icon{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 590px;
+}
+ 
+/* 右边 */
+.shipin-you {
+    float: right;
+    width: 320px;
+   
+}
+ 
+.shipin-you .vip {
+    position: relative;
+    width: 320px;
+    height: 44px;
+    background-color: #00a1d6;
+    text-align: center;
+    line-height: 44px;
+    color: #fff;
+    border-radius: 7px;
+}
+ 
+.shipin-you .vip img {
+    position: absolute;
+    top: -16px;
+    left: 5px;
+    width: 60px;
+    height: 60px;
+}
+ 
+/* 弹幕列表 */
+.shipin-you .danmu-liebiao {
+    width: 320px;
+    height: 46px;
+    line-height: 46px;
+    background-color: #f4f4f4;
+    margin: 20px 0;
+    padding: 0 15px;
+    border-radius: 3px;
+    font-size: 16px;
+}
+ 
+.shipin-you .danmu-liebiao em {
+    color: #757575;
+}
+ 
+/* 选集 */
+.shipin-you .xuanji {
+    height: 42px;
+    padding: 0 15px;
+    line-height: 42px;
+    background-color: #f4f4f4;
+}
+ 
+.shipin-you .xuanji {
+    font-size: 16px;
+}
+ 
+.shipin-you .xuanji em {
+    font-size: 24px !important;
+    vertical-align: middle;
+}
+ 
+.shipin-you .xuanji i {
+    float: right;
+    font-size: 12px;
+    color: #999;
+}
+ 
+.shipin-you .xuanji i::after {
+    font-size: 16px !important;
+    color: #000;
+    margin-left: 5px;
+}
+ 
+.qingdan {
+    height: 148px;
+    padding: 0 16px;
+    background-color: #f4f4f4;
+}
+ 
+.qingdan li {
+    position: relative;
+    display: inline-block; 
+    width: 64px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #e5e9ef;
+    border-radius: 3px; 
+    cursor: pointer;
+}
+
+.qingdan li:nth-child(4n) {
+    margin-right: 10px;
+}
+
+.qingdan li:nth-child(n+9) {
+    margin-bottom: 10px;
+}
+
+.qingdan li:hover {
+    background-color: #e5e9ef;
+}
+
+.qingdan .selected {
+    background-color: #00a1d6;
+    color: #fff;
+}
+
+ 
+.qingdan .selected {
+    background-color: #00a1d6;
+    color: #fff;
+}
+ 
+.qingdan li:nth-child(n+2)::after {
+    content: '会员';
+    position: absolute;
+    top: -5px;
+    right: -2px;
+    width: 32px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    border-radius: 3px;
+    text-align: center;
+    color: #fff;
+    background-color: #fb7299;
+}
+ 
+/* 相关推荐 */
+.xiangguan-tuijian {
+    margin-top: 15px;
+    color: #222;
+    font-size: 16px;
+}
+ 
+/* 推荐视频列表 */
+.tuijian-liebiao {
+    margin-top: 10px;
+    overflow: hidden;
+}
+ 
+.tuijian-liebiao li {
+    margin-bottom: 10px;
+    height: 88px;
+}
+ 
+.tuijian-liebiao img {
+    float: left;
+    width: 141px;
+    height: 88px;
+    border-radius: 5px;
+}
+ 
+.tuijian-liebiao .shipin-jieshao {
+    float: left;
+    margin-left: 10px;
+    width: 165px;
+    height: 88px;
+    font-size: 12px;
+    color: #999999;
+}
+ 
+.tuijian-liebiao .shipin-jieshao .title {
+    height: 36px;
+    font-size: 14px;
+    color: #212121;
+}
+ 
+.tuijian-liebiao .shipin-jieshao .jishu {
+    margin-top: 15px;
+ 
+}
+ 
+.tuijian-liebiao .shipin-jieshao .count {
+    margin-top: 5px;
+}
+
+.dibu {
+    background-color: #f6f7f8;
+    width: 1400px;
+    height: 360px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.dibu1 {
+    width: 1400px;
+    height: 86px;
+    margin-bottom: 30px;
+}
+
+.dibu11 {
+    width: 350px;
+    height: 86px;
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+}
+
+.dibu11>p {
+    color: #a69eac;
+    margin-bottom: 5px;
+}
+
+.dibu11 a {
+    margin-right: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #18191c;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.dibu2 {
+    width: 1400px;
+    height: 144px;
+    padding-top: 30px;
+    margin-bottom: 20px;
+}
+
+.dibu22 {
+    width: 1086px;
+    height: 144px;
+    margin-left: 160px;
+    margin-right: 160px;
+}
+
+.dibu222 {
+    width: 1086px;
+    height: 24px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #989aa0;
+    text-align: center;
+}
+
+.dibu222 a {
+    text-decoration: none;
+    color: #989aa0;
+}
+
+.dibu222 a:hover {
+    color: #00aeed;
+}
+
+.dibu3 {
+    width: 400px;
+    height: 45px;
+    margin-left: 503px;
+    margin-right: 503px;
+}
+
+.dibu3 img {
+    width: 96px;
+    height: 39px;
+    margin-right: 20px;
+}
+
+
+/* 导航栏固定与覆盖 */
+.daohanglan {
+    z-index: 1000;  
+}
+
+.daohanglan.scrolled {
+    background-color: white;
+    border-bottom: 1px rgb(255, 255, 255) solid;
+    box-shadow: 0px 3px 3px rgba(181, 181, 181, 0.3); 
+
+}
+
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.shipin-you::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.dibu {
+    width: 100%;
+}
