@@ -1,0 +1,520 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赛马娘 巅峰之路</title>
+    <link rel="stylesheet" href="styles/video.css">
+</head>
+ 
+<body>
+<div class="divv">
+<div class="main-container">
+
+    <div class="head">
+            
+            <!-- 头部导航栏 -->
+            <div class="daohanglan">
+                <!-- 左侧导航栏-->
+                <ul class="daohanglan-zuo">
+                    <!-- 这里的宽度调整每个标签的宽度 -->
+                    <li style="width:43px ;height: 64px;"><a href="">首页</a></li>
+                    <li style="width:43px ;height: 64px;"><a href="">番剧</a></li>
+                    <li style="width:43px ;height: 64px;"><a href="">直播</a></li>
+                    <li style="width:65px ;height: 64px;"><a href="">游戏中心</a></li>
+                    <li style="width:50px ;height: 64px;"><a href="">会员购</a></li>
+                    <!-- 注意这里的漫画拓展 -->
+                    <li style="width:43px ;height: 64px;" class="manhua"><a href="">漫画</a></li>
+                    <li style="width:43px ;height: 64px;"><a href="">赛事</a></li>
+                    <!-- 下载客户端拓展 -->
+                    <li style="width:91px ;height: 64px;"><a href="" class="xiake">
+                            <img src="images/下载黑.png" alt="" class="icon icon-xiazai">下载客户端</a></li>
+                </ul>
+                <!-- 头部搜索框 -->
+                <div class="sousuokuang">
+                    <form action="">
+                        <div class="shurukuang">
+                            <input type="text" placeholder="计划有变，准备夺冠">
+                        </div>
+                        <div class="sousuo-tubiao">
+                            <img src="images/搜索.png" alt="">
+                        </div>
+                    </form>
+                </div>
+                <!-- 右侧用户区 -->
+                <div class="daohanglan-you">
+                    <ul>
+                        <!-- 头像大小和位置，注意其中的border-radius改变头像形状 -->
+                        <li style="margin-right: 20px;">
+                            <img src="images/avatar2.jpg" alt="" style="width: 40px;height: 40px;border-radius: 23px;">
+                            
+                            <div class="denglukuang" id="dengluKuang">
+                                <!-- 上部分，显示头像 -->
+                                <div class="denglukuang-avatar">
+                                    <img src="images/avatar2.jpg" alt="" class="denglu-touxiang">
+                                    <span id="nowName" class="now-name"></span>
+                                </div>
+                                <!-- 下部分，显示登录按钮 -->
+                                <div class="denglukuang-content">
+                                    <button id="dengluBtn">登录</button>
+                                    <!-- 隐藏的输入框和确认按钮 -->
+                                    <div class="denglu-input" id="dengluInput">
+                                        <input type="text" id="nownameInput" placeholder="请输入用户名">
+                                        <button id="querenBtn">确认</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </li>
+                        <li><a href=""><img src="images/大会员黑.png" alt="" class="icon icon-dahuiyuan"
+                                    style="margin-left: 7px;"><span>大会员</span></a></li>
+                        <li><a href=""><img src="images/消息黑.png" alt="" class="icon icon-xiaoxi"><span>消息</span></a></li>
+                        <li><a href=""><img src="images/动态黑.png" alt="" class="icon icon-dongtai"><span>动态</span></a></li>
+                        <li><a href=""><img src="images/收藏黑.png" alt="" class="icon icon-shoucang"><span>收藏</span></a></li>
+                        <li><a href=""><img src="images/历史黑.png" alt="" class="icon icon-lishi"><span>历史</span></a></li>
+                        <li><a href=""><img src="images/灯泡黑.png" alt="" class="icon icon-dengpao" style="margin-left: 14px;"><span>创作中心</span></a>
+                        </li>
+                        <!-- 投稿按钮 -->
+                        <li style="width: 90px;height: 34px;background-color: #fb7299;border-radius:10px;margin-left: 5px;">
+                            <a href="">
+                                <img src="images/上传.png" alt="" style="position: relative;left: 12px;top: 6px;">
+                                <span class="tougao" style="position: relative;top: -16px;left: 45px;">投稿</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    <div class="shipinqu quanbu">
+        <!-- 左边 -->
+        <div class="shipin-zuo">
+            <!-- 大视频 -->
+            <div class="shipin">
+                <video controls="" id="videoPlayer">
+                    <source src="test.mp4" type="video/mp4"/>
+                    您的浏览器不支持视频标签。
+                </video>
+            </div>
+            <!-- 弹幕工具栏 -->
+            <div class="danmu-tools">
+                <img src="images/弹幕.png" class="danmu-kaiguan" data-status="on"><!-- 弹幕开关图标 -->
+                <img src="images/弹幕设置.png" class="danmu-yangshi"><!-- 选择弹幕格式的图标 -->
+                <div class="danmu-yangshi-container" style="display: none;">
+                    <div class="danmu-colors">
+                        <div class="color-option" data-color="red" style="background-color: red;"></div>
+                        <div class="color-option" data-color="green" style="background-color: green;"></div>
+                        <div class="color-option" data-color="blue" style="background-color: blue;"></div>
+                        <div class="color-option" data-color="yellow" style="background-color: yellow;"></div>
+                    </div>
+                    <div class="danmu-sizes">
+                        <button class="size-option" data-size="small">小</button>
+                        <button class="size-option" data-size="medium">中</button>
+                        <button class="size-option" data-size="large">大</button>
+                    </div>
+                </div>
+                <input type="text" placeholder="输入弹幕内容..." id="danmuInput" /> <!-- 输入框 -->
+                <button id="sendDanmu">发送</button> <!-- 发送按钮 -->
+                <button class="speed-kaiguan">倍速</button>
+                <div class="speed-yangshi-container" style="display: none;">
+                    <button class="speed-option" data-speed="2">×2</button>
+                    <button class="speed-option" data-speed="1.5">×1.5</button>
+                    <button class="speed-option" data-speed="1">×1</button>
+                    <button class="speed-option" data-speed="0.5">×0.5</button>
+                </div>
+            </div>
+
+            <!-- 工具栏 -->
+            <div class="ewai">
+                <ul>
+                    <li>
+                        <span>97万</span>
+                    </li>
+                    <li>
+                        <span>93.5万</span>
+                    </li>
+                    <li>
+                        <span>分享</span>
+                    </li>
+                    <li>
+                        <span>用手机看</span>
+                    </li>
+                    <li>
+                        <span>一起看</span>
+                    </li>
+ 
+                </ul>
+            </div>
+            <!-- 视频下方 -->
+            <div class="xiafang">
+                <!-- 左边的封面 -->
+                <div class="xiafang-zuo">
+                    <img src="images/海报.webp" alt="">
+                </div>
+                <!-- 右边的描述 -->
+                <div class="xiafang-you">
+                    <div class="title">
+                        <h3>赛马娘 巅峰之路</h3>
+                        <div class="title-you ">
+                            <div class="dianping">
+                                <span>点评</span>
+                            </div>
+                            <div class="zhuifan">
+                                追番
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xiafang-count">
+                        <p>318.3万播放 · 2.4万弹幕 · 268.7万系列追番</p>
+                    </div>
+                    <div class="biaoqian">
+                        <span>番剧/运动/热血 · 2023</span>
+                        <span class="jishu">已完结, 全4话</span>
+                        <span>BV1tM4y1H7rN</span>
+                    </div>
+                    <div class="jieshao">
+                        简介：经典三冠赛，皋月奖、日本德比、菊花赏。在这些一生只能挑战一次的赛事中夺冠，是所有马娘和训练营的梦想。
+                        成田路、爱慕织姬、好歌剧，这三位被称为三强的马娘，心怀绝对不能输的决意，为争夺最强，在火热的经典战线上相互竞争。
+                        ————赛马娘新系列网络动画企划，终于启动。
+                    </div>
+                    <div class="pingfen">
+                        <p>
+                            <span class="shuzi">9.8</span>
+                            <span class="fen">分</span>
+                        </p>
+                        <p class="ren">12.9万人评分</p>
+                    </div>
+                </div>
+            </div>
+            <div class="shuliang">
+                21947 评论
+            </div>
+            <!-- 评论区输入 -->
+            <div class="comment-container">
+                <img src="images/avatar2.jpg" alt="用户头像" class="comment-avatar">
+                <textarea class="comment-input" placeholder="只是一直在等你，并不是不想评论哦"></textarea>
+                <button class="comment-send" id="commentSendButton">发送</button>
+            </div>
+            <!-- 评论区主体 -->
+            <div class="comments-display" id="commentsDisplay">
+           
+           
+           
+            </div>
+            
+            
+        </div>
+        <!-- 右边 -->
+        <div class="shipin-you">
+            <div class="vip">
+                开通大会员观看
+                <img src="images/我的大会员.png" alt="">
+            </div>
+            <div class="danmu-liebiao">
+                <span>弹幕列表</span>
+            </div>
+            <div class="xuanji">
+                <span>选集</span>
+                <i>1/4</i>
+            </div>
+            <ul class="qingdan">
+                <li class="selected">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+            <div class="xiangguan-tuijian">
+                <span>相关推荐</span>
+            </div>
+            <ul class="tuijian-liebiao">
+                <li>
+                    <img src="images/推荐1.webp" alt="">
+                    <div class="shipin-jieshao">
+                        <p class="title">赛马娘四格</p>
+                        <p class="jishu">全13话</p>
+                        <p class="count">1.1亿播放 · 115.3万弹幕</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/推荐2.webp" alt="">
+                    <div class="shipin-jieshao">
+                        <p class="title">LoveLive 超级明星！第二季</p>
+                        <p class="jishu">全13话</p>
+                        <p class="count">1.1亿播放 · 115.3万弹幕</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/推荐3.webp" alt="">
+                    <div class="shipin-jieshao">
+                        <p class="title">LoveLive 虹咲学院</p>
+                        <p class="jishu">全92话</p>
+                        <p class="count">5557万播放 · 96.1万弹幕</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/推荐4.webp" alt="">
+                    <div class="shipin-jieshao">
+                        <p class="title">辉夜大小姐想让我告白</p>
+                        <p class="jishu">全12话</p>
+                        <p class="count">6945.8万播放 · 172.9万弹幕</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/推荐5.webp" alt="">
+                    <div class="shipin-jieshao">
+                        <p class="title">少女歌剧</p>
+                        <p class="jishu">全224话</p>
+                        <p class="count">1.1亿播放 · 115.3万弹幕</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/推荐6.webp" alt="">
+                    <div class="shipin-jieshao">
+                        <p class="title">pop子和pipi美的日常</p>
+                        <p class="jishu">全13话</p>
+                        <p class="count">2.1亿播放 · 413.5万弹幕</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/推荐7.webp" alt="">
+                    <div class="shipin-jieshao">
+                        <p class="title">逆转裁判 第二季</p>
+                        <p class="jishu">全203话</p>
+                        <p class="count">1.2亿播放 · 352.1万弹幕</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/推荐8.webp" alt="">
+                    <div class="shipin-jieshao">
+                        <p class="title">BanG Dream！</p>
+                        <p class="jishu">全12话</p>
+                        <p class="count">7173.7万播放 · 339.4万弹幕</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/推荐9.webp" alt="">
+                    <div class="shipin-jieshao">
+                        <p class="title">白沙水族馆</p>
+                        <p class="jishu">全13话</p>
+                        <p class="count">1.1亿播放 · 115.3万弹幕</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/推荐10.webp" alt="">
+                    <div class="shipin-jieshao">
+                        <p class="title">佐贺偶像是传奇 卷土重来</p>
+                        <p class="jishu">全13话</p>
+                        <p class="count">1.1亿播放 · 115.3万弹幕</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/推荐11.webp" alt="">
+                    <div class="shipin-jieshao">
+                        <p class="title">LoveLIve！School Idol</p>
+                        <p class="jishu">全92话</p>
+                        <p class="count">5557万播放 · 96.1万弹幕</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/推荐12.webp" alt="">
+                    <div class="shipin-jieshao">
+                        <p class="title">BanG Dream！少女乐团派对</p>
+                        <p class="jishu">全12话</p>
+                        <p class="count">6945.8万播放 · 172.9万弹幕</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/推荐13.webp" alt="">
+                    <div class="shipin-jieshao">
+                        <p class="title">学园偶像 阳光</p>
+                        <p class="jishu">全224话</p>
+                        <p class="count">1.1亿播放 · 115.3万弹幕</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/推荐14.webp" alt="">
+                    <div class="shipin-jieshao">
+                        <p class="title">黑塔利亚</p>
+                        <p class="jishu">全13话</p>
+                        <p class="count">2.1亿播放 · 413.5万弹幕</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/推荐15.webp" alt="">
+                    <div class="shipin-jieshao">
+                        <p class="title">孤独摇滚</p>
+                        <p class="jishu">全203话</p>
+                        <p class="count">1.2亿播放 · 352.1万弹幕</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/推荐16.webp" alt="">
+                    <div class="shipin-jieshao">
+                        <p class="title">偶像荣耀</p>
+                        <p class="jishu">全12话</p>
+                        <p class="count">7173.7万播放 · 339.4万弹幕</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/推荐17.webp" alt="">
+                    <div class="shipin-jieshao">
+                        <p class="title">女神异闻录5</p>
+                        <p class="jishu">全13话</p>
+                        <p class="count">1.1亿播放 · 115.3万弹幕</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/推荐18.webp" alt="">
+                    <div class="shipin-jieshao">
+                        <p class="title">神推偶像登上武道馆我就死而无憾</p>
+                        <p class="jishu">全13话</p>
+                        <p class="count">1.1亿播放 · 115.3万弹幕</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/推荐19.webp" alt="">
+                    <div class="shipin-jieshao">
+                        <p class="title">小碧蓝幻想</p>
+                        <p class="jishu">全92话</p>
+                        <p class="count">5557万播放 · 96.1万弹幕</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/推荐20.webp" alt="">
+                    <div class="shipin-jieshao">
+                        <p class="title">属性咖啡厅</p>
+                        <p class="jishu">全12话</p>
+                        <p class="count">6945.8万播放 · 172.9万弹幕</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/推荐21.webp" alt="">
+                    <div class="shipin-jieshao">
+                        <p class="title">莉可丽丝</p>
+                        <p class="jishu">全224话</p>
+                        <p class="count">1.1亿播放 · 115.3万弹幕</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+    <div class="dibu">
+        <div class="dibu1">
+            <div class="dibu11" style="margin-right: 135px;">
+                <p>bilibili</p>
+                <div>
+                    <a href="">关于我们</a>
+                    <a href="">联系我们</a>
+                    <a href="">用户协议</a>
+                    <a href="">加入我们</a>
+                    <a href="">友情链接</a>
+                    <a href="">隐私协议</a>
+                    <a href="">bilibili认证</a>
+                    <a href="">Investor Relations</a>
+                </div>
+            </div>
+            <div class="dibu11" style="width: 420px;margin-right:135px;">
+                <p>传送门</p>
+                <div>
+                    <a href="">协议汇总</a>
+                    <a href="">活动中心</a>
+                    <a href="">活动专题页</a>
+                    <a href="">侵权申诉</a>
+                    <a href="">帮助中心</a>
+                    <a href="">社区中心</a>
+                    <a href="">壁纸站</a>
+                    <a href="">广告合作</a>
+                    <a href="">名人堂</a>
+                    <a href="">MCN管理中心</a>
+                    <a href="">高级弹幕</a>
+                    <a href="">品牌号官网</a>
+                </div>
+            </div>
+            <div class="dibu11">
+                <a href="" style="margin-right: 27px;">
+                    <img src="images/下载app.png" alt="" style="width:56px ;height: 56px;">
+                    <p>下载APP</p>
+                </a>
+                <a href="" style="margin-right: 27px;">
+                    <img src="images/公益岗位.png" alt="" style="width:56px ;height: 56px;">
+                    <p style="text-align: center;">公益</p>
+                </a>
+                <a href="" style="margin-right: 27px;">
+                    <img src="images/微博.png" alt="" style="width:56px ;height: 56px;">
+                    <p>官方微博</p>
+                </a>
+                <a href="" style="margin-right: 27px;">
+                    <img src="images/微信.png" alt="" style="width:56px ;height: 56px;">
+                    <p>官方微信</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="dibu2">
+            <div class="dibu22">
+                <div class="dibu222">
+                    <a href="">营业执照</a>
+                    <span>信息网络传播视听节目许可证：0910417</span>
+                    <span>网络文化经营许可证 沪网文【2019】3804-274号</span>
+                    <span>广播电视节目制作经营许可证</span>
+                    <span>增值电信业务经营许可证 沪B2-20100043</span>
+                </div>
+                <div class="dibu222">
+                    <a href="">互联网ICP备案：沪ICP备13002172号-3</a>
+                    <span>出版物经营许可证 沪批字第U6699 号</span>
+                    <span>互联网药品信息服务资格证 沪-非经营性-2022-0011</span>
+                    <span>营业性演出许可证 沪市文演（经）00-2253 |</span>
+
+                </div>
+                <div class="dibu222">
+                    <a href="">不良信息举报邮箱：help@bilibili.com</a>
+                    <a href="">涉未成年举报邮箱：teenprotect@bilibili.com</a>
+                    <span>不良信息举报电话：4006262233转3</span>
+                    <span class="jingling">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <a href="">上海互联网举报中心 |</a>
+                    <a href="">12345政务服务便民热线 |</a>
+                </div>
+
+                <div class="dibu222">
+                    <span class="jingling1">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <a href="">沪公网安备31011002002436号 |</a>
+                    <a href="">儿童色情信息举报专区 |</a>
+                    <a href="">儿童色情信息举报专区 |</a>
+                </div>
+
+                <div class="dibu222">
+                    <span>儿童色情信息举报专区 |</span>
+                    <span class="jingling2">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <a href="">中国互联网违法和不良信息举报中心</a>
+                    <span>亲爱的市民朋友，上海警方反诈劝阻电话“96110”系专门针对避免您财产被骗受损而设，请您一旦收到来电，立即接听。</span>
+                </div>
+
+                <div class="dibu222">
+                    <span>公司名称：上海宽娱数码科技有限公司 |</span>
+                    <span>公司地址：上海市杨浦区政立路489号 |</span>
+                    <span>电话：021-25099888</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="dibu3">
+            <a href=""><img src="images/合作.png" alt=""></a>
+            <a href=""><img src="images/新闻.png" alt=""></a>
+            <a href=""><img src="images/热线.png" alt=""></a>
+        </div>
+    </div>
+
+</div>
+<script src="scripts/video.js">
+</script>
+</body>
+ 
+</html>
+
